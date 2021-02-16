@@ -24,3 +24,11 @@ for j in range(len(location)):
     ratings[:]=[key.get(e,) for e in ratings]
     time.sleep(2)
     browser.quit()
+
+collection = []
+for i in range(len(titles)):
+    if ratings[i] == None:
+        continue
+    make_set = (titles[i],ratings[i])
+    collection.append(make_set)
+    # total is 1446 but only 933 restaurants have ratings.
